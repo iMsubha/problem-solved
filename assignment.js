@@ -1,15 +1,14 @@
-// return 
+// https://github.com/iMsubha/problem-solved
+
+// conversion from Kilometer to Meter
 function kilometerToMeter(kilometer) {
   if (kilometer <= 0) {
     return "Distance can not be negative or zero!";
   }
   return kilometer * 1000;
 }
-// console.log(kilometerToMeter(-1));
-// console.log(kilometerToMeter(0));
-// console.log(kilometerToMeter(36));
 
-// per watch price = 50, per phone price = 100,  per laptop price = 500
+// calculating total budget of watch , phone and laptop
 function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity) {
   if (watchQuantity <= 0 || phoneQuantity <= 0 || laptopQuantity <= 0) {
     return "Please enter non-zero and positive number of all products.";
@@ -20,13 +19,11 @@ function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity) {
     return watchPrice + phonePrice + laptopPrice;
   }
 }
-// console.log(budgetCalculator(3, 5, 6));
-// console.log(budgetCalculator(3, 0, 6));
-// console.log(budgetCalculator(3, 5, -6));
 
+// calculating total hotel cost based on days
 function hotelCost(numberOfDays) {
   if (numberOfDays <= 0) {
-    return "Please Enter A Valid Number.";
+    return "Please enter a valid number of days!";
   } else if (numberOfDays <= 10) {
     return 100 * numberOfDays;
   } else if (numberOfDays > 10 && numberOfDays <= 20) {
@@ -41,34 +38,24 @@ function hotelCost(numberOfDays) {
     return totalCost;
   }
 }
-// console.log(hotelCost(10));
-// console.log(hotelCost(0));
-// console.log(hotelCost(-10));
-// console.log(hotelCost(12));
-// console.log(hotelCost(27));
 
+// returning the longest name
 function megaFriend(friendsList) {
   var numberOfFriends = friendsList.length;
   var lengthOfNames = [];
   var max, maxIndex;
   if (friendsList === undefined || numberOfFriends == 0) {
-    return "Please Enter Valid Names";
+    return "Please enter valid names!";
   }
   for (var i = 0; i < numberOfFriends; i++) {
     lengthOfNames.push(friendsList[i].length);
   }
-  console.log(lengthOfNames);
   max = lengthOfNames[0];
-  for (let i = 1; i < numberOfFriends; i++) {
+  for (var i = 1; i < numberOfFriends; i++) {
     if (lengthOfNames[i] > max) {
       max = lengthOfNames[i];
     }
   }
   maxIndex = lengthOfNames.indexOf(max);
-  console.log(friendsList[maxIndex]);
   return friendsList[maxIndex];
 }
-// console.log(megaFriend([]));
-// console.log(
-//   megaFriend(["asn njk", "hjku huj", "ui vghn jkrrr y", "ghyuj", "vbghj kj"])
-// );
